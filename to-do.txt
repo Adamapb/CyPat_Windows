@@ -1,0 +1,10 @@
+Do noted CIS stuff
+Firewall rules, has been enabled
+integrate antivirus/rootkit scans into checklist
+check discord resourses
+Finish Checklist
+compare to notebook
+Finish GPO stuff
+run scap
+debug
+check known connections

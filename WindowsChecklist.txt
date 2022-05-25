@@ -1,0 +1,198 @@
+Windows hardening checklist
+**Sections 8,15 to be improved
+
+1. Forensics:
+Enter text answer into specified area on the txt file on the desktop.
+
+2.Update password policies:
+	a. Launch "Local Security Policy", go to path Account Policies>Password Policy
+	b. Enter following settings (In order, top to bottom):
+		-24 passwords remember
+		-30-90 days
+		-15 days
+		-8 characters
+		-enabled
+		-disabled
+	c. Use "Control Panel" to update account passwords:
+		-Go to path ControlPanel>UserAccountsandFamilySafety>UserAccounts
+		-Cycle through the list of accounts, clicking "Change your password" on each, and update password to match new conventions
+
+3. User management-
+	a.delete any users not in readme:
+		-Launch "Control Panel", follow path ControlPanel>UserAccounts>ManageAccount
+		-cycle through accounts in list that are not needed, clicking account name then "Delete the User"
+	b.add any users from readme that aren't already on system:
+		-Launch "Settings" go to path Accounts>Family&OtherUsers>AddSomeoneElseToThisPC
+		-Go through user configuration "I don't have this person's sign-in info">"Add a user without a Microsoft account">*Enter user info*
+	c.alter user roles as needed:
+		-from cmd run "mmc"
+		-from mmc, go file>Add/RemoveSnap-In>AvailableSnap-Ins>LocalUsersAndGroups>ok
+		-select "groups", verify users have the role assigned in the readme
+	d.alter user properties as needed:
+		-from mmc, click "users", then right click accounts to be changed. Click "properties", then follow below conventions
+			~none checked
+	e. set lockout policy
+		-launch Local Security Policy go to AccountPolicies.AccountLockoutPolicy, enter below settings (top to bottom):
+			~30 minutes
+			~5 invalid logon attempts
+			~30 minutes
+	f. disable default accounts
+		-from mmc, select "Users", right-click "Administrator" and click "rename". Rename the account.
+		-Do the same for the "Guest" account. Must be renamed.
+		-Right click both the renamed Administrator and Guest accounts and click "Set Password". Set a password for both.
+		
+4. set up group policies
+	a. review the readme for any groups that need to be created
+	b. access the groups menu from the mmc, make sure all users are in the correct groups specified in the readme
+		-add or remove users from groups by clicking on the group name
+	c.cross-reference default groupt list (Exhibit 1, bottom of doc) with list in groups menu. 
+		-review and possibly remove any groups that are not default or specified in the readme by right-clicking and clicking "delete"
+		-add groups if needed by right-clicking on blank space in groups menu and clicking "new group"
+
+5. enable windows notificatione
+	a. Launch "Windows Action Center" (Win+A) 
+	b. click "Manage Notifications". Turn on all notifications.
+
+6. configure User Access Control
+	a. Launch "UserAccountControlSettings", (Searchable in settings) 
+	b. on left-hand side, raise bar to "Always Notify".
+
+7. Configure updates
+	a. go to "System and Security" in control panel, then to the "Windows Update" section
+	b. enable auto-updating, and update now if necessary (include recommended updates by Microsoft)
+
+8. Configure Windows Firewall
+	a. go to path "ControlPanel>SystemSecurity>WindowsDefenderFirewall"
+	b. from "Turn Windows Defender Firewall on or off", turn on Public and private firewall, disable inbound that isn't explicitly allowed.
+	c. **If you recieve an error, refer to exhibit 2**
+
+9. Disable rdp
+	a. go to "ControlPanel>SystemSecurity>" under "System", disable remote access (Can also be done through "services.msc"
+		
+10. Antivirus softwars to be installed and configured
+	a. Spybot
+	b. Avast
+	c. consider malwarebytes
+	d. WinClam?
+	e. use "Everything" from "voidtools.com", then use "Revo Uninstaller" from "www.revouninstaller.com" to thoroughly remove anything other than CyberPatriot items not EXPLICITLY required in readme. (Use advanced remove for anything inherently malicious)
+
+11. Process check
+	a. run "netstat -anb 5"('o' apendage will show PID) and check for unusual output//port numbers. Double-check listening ports are req'd.
+	b. run "tasklist", same process.
+	c. "netstat" -ano -p *protocolname* 5" can search tasks by protocol, can be used in conjunction with readme data
+	d. you can use the task manager to sort tasks by memory usage
+	e. use "www.processlibrary.com" to determine if processes are legitimate.
+
+12. Patch management/misc
+	a. use the tool found at "ninite.com" to manage patches for selected programs
+	b. run "sfc /scannow" from cmd to check for bad windows files	
+	c. run "notepad C:\Windows\System32\drivers\etc\hosts" to review the hosts file. look for anything out of the ordinary
+	d. use the tool found at "https://www.nirsoft.net/utils/cports.html" to show all open connections, highlighting suspicious items in pink, gives process that opened ports.
+
+13. Configure internet options
+	a. search "Internet Options" and start
+	b. navigate to "Advanced" tab. Click "Reset" under "Reset Internet Explorer settings"
+	c. navigate to "Security" tab. Set slider to highest security level for all zones
+	d. navigate to "Privacy" tab. Check all boxes, make sure there aren't any exceptions by clicking "advanced" or "settings"
+	e. navigate to "Connections" tab, click "LAN Settings". Make sure there is no proxy or automatic configuration scripts being used. Check "Automatically detect settings"
+	f. Check settings of required browsers on system other than internet explorer.
+
+14. Disable remote access
+	a. follow path "ControlPanel>SystemAndSecurity>System>RemoteSettings"
+	b. from this menu, uncheck "Allow Remote Assistance to this computer", then check "Don't allow connections to this computer"
+**If Remote access needs to be enabled, check "Allow remote connections to this computer" and "Allow connections only from computers running..." If a specific user is needed, click "Select Users"
+
+15. configure file settings
+	a. search and launch "folder options", go to "view" tab
+	b.  Show hidden files, folders, and drives should be checked and Hide extensions for known file types should be unchecked... this can help with cleanup if points are still missing
+	c. remove unwanted file types from system
+
+16. enable DEP
+	a. go to path "ControlPanel>SystemAndSecurity>System>AdvancedSystemSettings>AdvancedTab>PerformanceSettings>DataExecutionPrevention"
+	b. turn on DEP for all programs and services and make sure no exceptions are given
+
+17. configure leftover security policies
+	a. go to path "LocalSecurityPolicy>LocalPolicy>AuditPolicy"
+		-set all to "Success, Failure" by clicking on item and clicking "Succeses" and "Failures"
+ 	b. configure "User Rights Assignment" to the perameters in the "UserRightsAssignment.txt" in the repo
+	c. configure "Security Options" to the perameters in the "SecurityOptions.txt" in the repo
+	d. configure all audit policies to the perameters in the "AuditPolicies.txt" in the repo **this is super time-consuming, do this absolutely last**
+
+18. final misc 
+	a. install microsoft service packs. Can be found through google.
+	b. enable bitlocker from path "ControlPanel>SystemAndSecurity>BitlockerDriveEncryption" **DO NOT LOSE MASTER PASSWORD**
+	c. enable Microsoft SmartScreen from path "ControlPanel>SystemAndSecurity>SecurityAndMaintenance>ChangeWindowsSmartscreen" and set it to highest setting.
+	d. download "Microsoft Baseline Security Analyzer" and run a scan on "127.0.0.1" (localhost)
+	e. open Group Policy editor and follow the path "User Configuration > Administrative Templates > Control Panel > Personalization
+		-Enable "Password protect the screen saver"
+		-set "Screen saver timeout" to 600 seconds
+	f. flush dns from cmd by running "ipconfig /flushdns"
+		
+		
+		
+		
+		
+Notes/If Stuck:
+-Use event viewer (Path: ControlPanel>SystemAndSecurity>AdministrativeTools>EventViewer) for forensics as needed.
+-Review task scheduler. Always run a restart before stopping scoring.		
+-use sysinternals' accessenums.exe to review file permissions. Files should only have perms for Administrator and the user they belong to.
+-use run to launch "msconfg.exe to show programs that run on startup
+-If lost, cross-reference categories you've earned points in with vulnerability categories from previous seasons to form an idea of what you're missing. Adam can get them for you.
+-Look at resource usage in task manager
+-review listening ports with "netstat -aonb", look at PID and corresponding process in task manager if necessary
+-netstat will also show the origin file of a process. Be sure to kill the origin process AND add a firewall rule for that port, if needed.
+-make sure File and Printer Sharing, Remote Assistance, Remote Desktop, and UPnP are ALL OFF
+-Try Glary utilities
+-Google "How to harden *critical service from readme*"
+
+Exhibit 1-
+-Administrators
+-Backup Operators
+-Cryptographic Operators
+-Distributed COM users
+-Event Log Readers
+-Guests
+-IIS_IUSRS
+-Network Configuration
+-Performance Log Users
+-Performance Monitor Users
+-Power Users
+-Remote Desktop Users
+-Replicator
+-System Managed Accounts
+-Users
+
+Exhibit 2-
+a. Go to Run and type "services.msc"
+b. click "name" to set to alphabetical, then click "status" to sort to not running
+c. set "Startup type" to "Automatic"
+d. try enabling again
+
+###################################################################
+Server-exclusives:
+
+1. Review port (firewall) configurations if specified by the readme
+
+2. Configure logging
+
+3. Disable unnecessary services-
+	a. go to path "ControlPanel>AdministrativeTools>Services", right click to disable
+		-Disable the following
+			~IIS
+			~NetMeeting Remote Desktop Sharing – VoIP
+			~Remote Desktop Help Session Manager
+			~Remote Registry
+			~Routing and Remote Access
+			~Simple File Sharing
+			~SSD Discovery Service
+			~Telnet
+			~FTP
+			~Universal Plug and Play Device Host
+			~Windows Messenger Service
+			
+Server Notes:
+-If all else fails, refer to UT@Austin's server checklist @ https://security.utexas.edu/os-hardening-checklist/windows-2016\
+-https://docs.microsoft.com/en-us/windows-server/security/windows-services/security-guidelines-for-disabling-system-services-in-windows-server may also be of assistance
+-make note of script @ https://github.com/BaiqingL/CyberPatriotScripts
+-make note of script @ https://github.com/xFaraday/EzScript/blob/master/newezscript.ps1
+-

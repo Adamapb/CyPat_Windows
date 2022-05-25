@@ -1,0 +1,16 @@
+##STIG Stuff-
+
+Checklist-
+-check drive partitioning for multiple OS's
+
+-Run "Advanced System Settings".
+Select the "Advanced" tab.
+Click the "Settings" button in the "Startup and Recovery" section.
+
+If the drop-down list box "Default operating system:" shows any operating system other than Windows 10, this is a finding.
+
+##Syntax-
+  reg add "HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Biometrics\FacialFeatures\" /v "EnhancedAntiSpoofing" /t REG_DWORD /d 1 /f
+     
+     
+     https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/reg-add

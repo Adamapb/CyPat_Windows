@@ -1,0 +1,260 @@
+id,severity,title
+V-220700,low,Secure Boot must be enabled on Windows 10 systems.
+V-220835,low,Windows Update must not obtain updates from other PCs on the Internet.
+V-220779,medium,The Application event log size must be configured to 32768 KB or greater.
+V-220778,medium,The system must be configured to audit System - System Integrity successes.
+V-220748,medium,The system must be configured to audit Account Logon - Credential Validation failures.
+V-220775,medium,The system must be configured to audit System - Security State Change successes.
+V-220774,medium,The system must be configured to audit System - Other System Events failures.
+V-220777,medium,The system must be configured to audit System - System Integrity failures.
+V-220776,medium,The system must be configured to audit System - Security System Extension successes.
+V-220771,medium,The system must be configured to audit Privilege Use - Sensitive Privilege Use successes.
+V-220838,low,Turning off File Explorer heap termination on corruption must be disabled.
+V-220773,medium,The system must be configured to audit System - Other System Events successes.
+V-220772,medium,The system must be configured to audit System - IPSec Driver failures.
+V-220825,low,The setting to allow Microsoft accounts to be optional for modern style apps must be enabled.
+V-220824,medium,Unauthenticated RPC clients must be restricted from connecting to the RPC server.
+V-220719,medium,Simple Network Management Protocol (SNMP) must not be installed on the system.
+V-220718,high,Internet Information System (IIS) or its subcomponents must not be installed on a workstation.
+V-220821,medium,Users must be prompted for a password on resume from sleep (on battery).
+V-220820,medium,Local users on domain-joined computers must not be enumerated.
+V-220823,high,Solicited Remote Assistance must not be allowed.
+V-220822,medium,The user must be prompted for a password on resume from sleep (plugged in).
+V-220713,medium,Only accounts responsible for the backup operations must be members of the Backup Operators group.
+V-220712,high,Only accounts responsible for the administration of a system must have Administrator rights on the system.
+V-220711,low,Unused accounts must be disabled or removed from the system after 35 days of inactivity.
+V-220710,medium,Non system-created file shares on a system must limit access to groups that require it.
+V-220717,medium,Permissions for system files and directories must conform to minimum requirements.
+V-220828,high,The default autorun behavior must be configured to prevent autorun commands.
+V-220715,low,Standard local user accounts must not exist on a system in a domain.
+V-220714,medium,Only authorized user accounts must be allowed to create or run virtual machines on Windows 10 systems.
+V-220906,medium,The US DoD CCEB Interoperability Root CA cross-certificates must be installed in the Untrusted Certificates Store on unclassified systems.
+V-220907,medium,Default permissions for the HKEY_LOCAL_MACHINE registry hive must be maintained.
+V-220904,medium,The External Root CA certificates must be installed in the Trusted Root Store on unclassified systems.
+V-220905,medium,The DoD Interoperability Root CA cross-certificates must be installed in the Untrusted Certificates Store on unclassified systems.
+V-220902,medium,Windows 10 Kernel (Direct Memory Access) DMA Protection must be enabled.
+V-220903,medium,The DoD Root CA certificates must be installed in the Trusted Root Store.
+V-220900,medium,Exploit Protection mitigations in Windows 10 must be configured for wmplayer.exe.
+V-220901,medium,Exploit Protection mitigations in Windows 10 must be configured for wordpad.exe.
+V-220908,medium,The built-in administrator account must be disabled.
+V-220909,medium,The built-in guest account must be disabled.
+V-220819,medium,The network selection user interface (UI) must not be displayed on the logon screen.
+V-220982,medium,The Restore files and directories user right must only be assigned to the Administrators group.
+V-220983,medium,The Take ownership of files or other objects user right must only be assigned to the Administrators group.
+V-220980,medium,The Perform volume maintenance tasks user right must only be assigned to the Administrators group.
+V-220981,medium,The Profile single process user right must only be assigned to the Administrators group.
+V-220780,medium,The Security event log size must be configured to 1024000 KB or greater.
+V-220781,medium,The System event log size must be configured to 32768 KB or greater.
+V-220782,medium,Windows 10 permissions for the Application event log must prevent access by non-privileged accounts.
+V-220783,medium,Windows 10 permissions for the Security event log must prevent access by non-privileged accounts.
+V-220784,medium,Windows 10 permissions for the System event log must prevent access by non-privileged accounts.
+V-220785,medium,Windows 10 must be configured to audit Other Policy Change Events Successes.
+V-220786,medium,Windows 10 must be configured to audit Other Policy Change Events Failures.
+V-220787,medium,Windows 10 must be configured to audit other Logon/Logoff Events Successes.
+V-220788,medium,Windows 10 must be configured to audit other Logon/Logoff Events Failures.
+V-220789,medium,Windows 10 must be configured to audit Detailed File Share Failures.
+V-220839,medium,File Explorer shell protocol must run in protected mode.
+V-220919,medium,The system must be configured to require a strong session key.
+V-220918,low,The maximum age for machine account passwords must be configured to 30 days or less.
+V-220728,medium,The Windows PowerShell 2.0 feature must be disabled on the system.
+V-220729,medium,The Server Message Block (SMB) v1 protocol must be disabled on the system.
+V-220726,high,Data Execution Prevention (DEP) must be configured to at least OptOut.
+V-220727,high,Structured Exception Handling Overwrite Protection (SEHOP) must be enabled.
+V-220724,medium,A host-based firewall must be installed and enabled on the system.
+V-220725,medium,Inbound exceptions to the firewall on Windows 10 domain workstations must only allow authorized remote management hosts.
+V-220915,medium,Outgoing secure channel traffic must be encrypted when possible.
+V-220914,medium,Outgoing secure channel traffic must be encrypted or signed.
+V-220720,medium,Simple TCP/IP Services must not be installed on the system.
+V-220721,medium,The Telnet Client must not be installed on the system.
+V-220850,medium,Remote Desktop Services must always prompt a client for passwords upon connection.
+V-220851,medium,The Remote Desktop Session Host must require secure RPC communications.
+V-220852,medium,Remote Desktop Services must be configured with the client connection encryption set to the required level.
+V-220853,medium,Attachments must be prevented from being downloaded from RSS feeds.
+V-220854,medium,Basic authentication for RSS feeds over HTTP must not be used.
+V-220855,medium,Indexing of encrypted files must be turned off.
+V-220856,medium,Users must be prevented from changing installation options.
+V-220857,high,The Windows Installer Always install with elevated privileges must be disabled.
+V-220858,medium,Users must be notified if a web-based program attempts to install software.
+V-220859,medium,Automatically signing in the last interactive user after a system-initiated restart must be disabled.
+V-220755,medium,The system must be configured to audit Logon/Logoff - Account Lockout failures.
+V-220734,medium,Bluetooth must be turned off unless approved by the organization.
+V-220866,medium,The Windows Remote Management (WinRM) service must not allow unencrypted traffic.
+V-220793,medium,Windows 10 must cover or disable the built-in or attached camera when not in use.
+V-220792,medium,Camera access from the lock screen must be disabled.
+V-220791,medium,Windows 10 must be configured to audit MPSSVC Rule-Level Policy Change Failures.
+V-220790,medium,Windows 10 must be configured to audit MPSSVC Rule-Level Policy Change Successes.
+V-220797,low,The system must be configured to prevent Internet Control Message Protocol (ICMP) redirects from overriding Open Shortest Path First (OSPF) generated routes.
+V-220796,medium,The system must be configured to prevent IP source routing.
+V-220795,medium,IPv6 source routing must be configured to highest protection.
+V-220794,medium,The display of slide shows on the lock screen must be disabled.
+V-220799,medium,Local administrator accounts must have their privileged token filtered to prevent elevated privileges from being used over the network on domain systems.
+V-220798,low,The system must be configured to ignore NetBIOS name release requests except from WINS servers.
+V-220731,medium,The Server Message Block (SMB) v1 protocol must be disabled on the SMB client.
+V-220730,medium,The Server Message Block (SMB) v1 protocol must be disabled on the SMB server.
+V-220733,medium,Orphaned security identifiers (SIDs) must be removed from user rights on Windows 10.
+V-220732,medium,The Secondary Logon service must be disabled on Windows 10.
+V-220735,medium,Bluetooth must be turned off when not in use.
+V-220969,medium,The Deny log on as a batch job user right on domain-joined workstations must be configured to prevent access from highly privileged domain accounts.
+V-220737,high,"Administrative accounts must not be used with applications that access the Internet, such as web browsers, or with potential Internet sources, such as email."
+V-220736,medium,The system must notify the user when a Bluetooth device attempts to connect.
+V-220739,medium,Windows 10 account lockout duration must be configured to 15 minutes or greater.
+V-220738,medium,Windows 10 non-persistent VM sessions should not exceed 24 hours. 
+V-220966,medium,The Create symbolic links user right must only be assigned to the Administrators group.
+V-220967,high,The Debug programs user right must only be assigned to the Administrators group.
+V-220960,medium,The Back up files and directories user right must only be assigned to the Administrators group.
+V-220961,medium,The Change the system time user right must only be assigned to Administrators and Local Service and NT SERVICE\autotimesvc.
+V-220962,medium,The Create a pagefile user right must only be assigned to the Administrators group.
+V-220963,high,The Create a token object user right must not be assigned to any groups or accounts.
+V-220843,medium,The password manager function in the Edge browser must be disabled.
+V-220842,medium,Windows 10 must be configured to prevent certificate error overrides in Microsoft Edge.
+V-220841,medium,Users must not be allowed to ignore Windows Defender SmartScreen filter warnings for unverified files in Microsoft Edge.
+V-220840,medium,Users must not be allowed to ignore Windows Defender SmartScreen filter warnings for malicious websites in Microsoft Edge.
+V-220847,medium,Windows 10 must be configured to require a minimum pin length of six characters or greater.
+V-220846,medium,The use of a hardware security device with Windows Hello for Business must be enabled.
+V-220845,medium,Windows 10 must be configured to disable Windows Game Recording and Broadcasting.
+V-220844,medium,The Windows Defender SmartScreen filter for Microsoft Edge must be enabled.
+V-220849,medium,Local drives must be prevented from sharing with Remote Desktop Session Hosts.
+V-220848,medium,Passwords must not be saved in the Remote Desktop Client.
+V-220826,low,The Application Compatibility Program Inventory must be prevented from collecting data and sending the information to Microsoft.
+V-220926,medium,Unencrypted passwords must not be sent to third-party SMB Servers.
+V-220827,high,Autoplay must be turned off for non-volume devices.
+V-220832,medium,Administrator accounts must not be enumerated during elevation.
+V-220744,medium,The minimum password age must be configured to at least 1 day.
+V-220745,medium,"Passwords must, at a minimum, be 14 characters."
+V-220746,medium,The built-in Microsoft password complexity filter must be enabled.
+V-220747,high,Reversible password encryption must be disabled.
+V-220740,medium,The number of allowed bad logon attempts must be configured to 3 or less.
+V-220741,medium,The period of time before the bad logon counter is reset must be configured to 15 minutes.
+V-220979,medium,The Modify firmware environment values user right must only be assigned to the Administrators group.
+V-220978,medium,The Manage auditing and security log user right must only be assigned to the Administrators group.
+V-220977,medium,The Lock pages in memory user right must not be assigned to any groups or accounts.
+V-220976,medium,The Load and unload device drivers user right must only be assigned to the Administrators group.
+V-220975,medium,"The Impersonate a client after authentication user right must only be assigned to Administrators, Service, Local Service, and Network Service."
+V-220974,medium,The Force shutdown from a remote system user right must only be assigned to the Administrators group.
+V-220973,medium,The Enable computer and user accounts to be trusted for delegation user right must not be assigned to any groups or accounts.
+V-220749,medium,The system must be configured to audit Account Logon - Credential Validation successes.
+V-220971,medium,The Deny log on locally user right on workstations must be configured to prevent access from highly privileged domain accounts on domain systems and unauthenticated access on all systems.
+V-220970,medium,The Deny log on as a service user right on Windows 10 domain-joined workstations must be configured to prevent access from highly privileged domain accounts.
+V-220876,medium,"Windows 10 Exploit Protection system-level mitigation, Validate exception chains (SEHOP), must be on."
+V-220877,medium,"Windows 10 Exploit Protection system-level mitigation, Validate heap integrity, must be on."
+V-220874,medium,"Windows 10 Exploit Protection system-level mitigation, Randomize memory allocations (Bottom-Up ASLR), must be on."
+V-220875,medium,"Windows 10 Exploit Protection system-level mitigation, Control flow guard (CFG), must be on."
+V-220872,low,Windows 10 should be configured to prevent users from receiving suggestions for third-party or additional applications. 
+V-220873,medium,"Windows 10 Exploit Protection system-level mitigation, Data Execution Prevention (DEP), must be on."
+V-220870,medium,The convenience PIN for Windows 10 must be disabled.  
+V-220871,medium,Windows Ink Workspace must be configured to disallow access above the lock.  
+V-220818,medium,Systems must at least attempt device authentication using certificates.
+V-220878,medium,Exploit Protection mitigations in Windows 10 must be configured for Acrobat.exe.
+V-220879,medium,Exploit Protection mitigations in Windows 10 must be configured for AcroRd32.exe.
+V-220800,medium,WDigest Authentication must be disabled.
+V-220911,medium,The built-in administrator account must be renamed.
+V-220910,medium,Local accounts with blank passwords must be restricted to prevent access from the network.
+V-220810,medium,Windows 10 must be configured to enable Remote host allows delegation of non-exportable credentials.
+V-220913,medium,Audit policy using subcategories must be enabled.
+V-220757,medium,The system must be configured to audit Logon/Logoff - Logoff successes.
+V-220756,medium,The system must be configured to audit Logon/Logoff - Group Membership successes.
+V-220940,medium,The system must be configured to meet the minimum session security requirement for NTLM SSP based clients.
+V-220941,medium,The system must be configured to meet the minimum session security requirement for NTLM SSP based servers.
+V-220753,medium,The system must be configured to audit Detailed Tracking - PNP Activity successes.
+V-220752,medium,The system must be configured to audit Account Management - User Account Management successes.
+V-220751,medium,The system must be configured to audit Account Management - User Account Management failures.
+V-220750,medium,The system must be configured to audit Account Management - Security Group Management successes.
+V-220861,medium,The Windows Explorer Preview pane must be disabled for Windows 10. 
+V-220722,medium,The TFTP Client must not be installed on the system.
+V-220863,medium,The Windows Remote Management (WinRM) client must not allow unencrypted traffic.
+V-220862,high,The Windows Remote Management (WinRM) client must not use Basic authentication.
+V-220865,high,The Windows Remote Management (WinRM) service must not use Basic authentication.
+V-220759,medium,The system must be configured to audit Logon/Logoff - Logon successes.
+V-220723,medium,Software certificate installation files must be removed from Windows 10.
+V-220917,low,The computer account password must not be prevented from being reset.
+V-220968,medium,The Deny access to this computer from the network user right on workstations must be configured to prevent access from highly privileged domain accounts and local accounts on domain systems and unauthenticated access on all systems.
+V-220811,low,Virtualization Based Security must be enabled on Windows 10 with the platform security level configured to Secure Boot or Secure Boot with DMA Protection.
+V-220883,medium,Exploit Protection mitigations in Windows 10 must be configured for FLTLDR.EXE.
+V-220916,medium,Outgoing secure channel traffic must be signed when possible.
+V-220964,medium,"The Create global objects user right must only be assigned to Administrators, Service, Local Service, and Network Service."
+V-220770,medium,The system must be configured to audit Privilege Use - Sensitive Privilege Use failures.
+V-220955,medium,Zone information must be preserved when saving attachments.
+V-220954,low,Toast notifications to the lock screen must be turned off.
+V-220957,medium,The Access this computer from the network user right must only be assigned to the Administrators and Remote Desktop Users groups.
+V-220956,medium,The Access Credential Manager as a trusted caller user right must not be assigned to any groups or accounts.
+V-220951,medium,User Account Control must virtualize file and registry write failures to per-user locations.
+V-220912,medium,The built-in guest account must be renamed.
+V-220952,medium,Passwords for enabled local Administrator accounts must be changed at least every 60 days.
+V-220814,medium,Group Policy objects must be reprocessed even if they have not changed.
+V-220815,medium,Downloading print driver packages over HTTP must be prevented.
+V-220816,medium,Web publishing and online ordering wizards must be prevented from downloading a list of providers.
+V-220817,medium,Printing over HTTP must be prevented.
+V-220959,medium,The Allow log on locally user right must only be assigned to the Administrators and Users groups.
+V-220958,high,The Act as part of the operating system user right must not be assigned to any groups or accounts.
+V-220812,high,Credential Guard must be running on Windows 10 domain-joined systems.
+V-220813,medium,"Early Launch Antimalware, Boot-Start Driver Initialization Policy must prevent boot drivers."
+V-220868,medium,The Windows Remote Management (WinRM) client must not use Digest authentication.
+V-220754,medium,The system must be configured to audit Detailed Tracking - Process Creation successes.
+V-220946,medium,Windows 10 must use multifactor authentication for local and network access to privileged and non-privileged accounts.
+V-220947,medium,User Account Control must automatically deny elevation requests for standard users.
+V-220743,medium,The maximum password age must be configured to 60 days or less.
+V-220895,medium,Exploit Protection mitigations in Windows 10 must be configured for POWERPNT.EXE.
+V-220896,medium,Exploit Protection mitigations in Windows 10 must be configured for PPTVIEW.EXE.
+V-220897,medium,Exploit Protection mitigations in Windows 10 must be configured for VISIO.EXE.
+V-220890,medium,Exploit Protection mitigations in Windows 10 must be configured for MSPUB.EXE.
+V-220944,medium,User Account Control approval mode for the built-in Administrator must be enabled.
+V-220893,medium,Exploit Protection mitigations in Windows 10 must be configured for OUTLOOK.EXE.
+V-220965,medium,The Create permanent shared objects user right must not be assigned to any groups or accounts.
+V-220945,medium,"User Account Control must, at minimum, prompt administrators for consent on the secure desktop."
+V-220898,medium,Exploit Protection mitigations in Windows 10 must be configured for VPREVIEW.EXE.
+V-220899,medium,Exploit Protection mitigations in Windows 10 must be configured for WINWORD.EXE.
+V-220697,medium,Domain-joined systems must use Windows 10 Enterprise Edition 64-bit version.
+V-220972,medium,The Deny log on through Remote Desktop Services user right on Windows 10 workstations must at a minimum be configured to prevent access from highly privileged domain accounts and local accounts on domain systems and unauthenticated access on all systems.
+V-220860,medium,PowerShell script block logging must be enabled on Windows 10.
+V-220948,medium,User Account Control must be configured to detect application installations and prompt for elevation.
+V-220698,medium,Windows 10 domain-joined systems must have a Trusted Platform Module (TPM) enabled and ready for use.
+V-220699,medium,"Windows 10 systems must have Unified Extensible Firmware Interface (UEFI) firmware and be configured to run in UEFI mode, not Legacy BIOS."
+V-220942,medium,"The system must be configured to use FIPS-compliant algorithms for encryption, hashing, and signing."
+V-220894,medium,Exploit Protection mitigations in Windows 10 must be configured for plugin-container.exe.
+V-220949,medium,User Account Control must only elevate UIAccess applications that are installed in secure locations.
+V-220809,medium,Command line data must be included in process creation events.
+V-220808,medium,Wi-Fi Sense must be disabled.
+V-220807,medium,Connections to non-domain networks when connected to a domain authenticated network must be blocked.
+V-220806,medium,Simultaneous connections to the Internet or a Windows domain must be limited.
+V-220805,medium,Windows 10 must be configured to prioritize ECC Curves with longer key lengths first.
+V-220804,medium,Hardened UNC Paths must be defined to require mutual authentication and integrity for at least the \\*\SYSVOL and \\*\NETLOGON shares.
+V-220803,medium,Internet connection sharing must be disabled.
+V-220802,medium,Insecure logons to an SMB server must be disabled.
+V-220801,medium,Run as different user must be removed from context menus.
+V-220716,medium,Accounts must be configured to require password expiration.
+V-220920,medium,"The machine inactivity limit must be set to 15 minutes, locking the system with the screensaver."
+V-220921,medium,The required legal notice must be configured to display before console logon.
+V-220922,low,The Windows dialog box title for the legal banner must be configured.
+V-220923,low,Caching of logon credentials must be limited.
+V-220924,medium,The Smart Card removal option must be configured to Force Logoff or Lock Workstation.
+V-220925,medium,The Windows SMB client must be configured to always perform SMB packet signing.
+V-220869,medium,Windows 10 must be configured to prevent Windows apps from being activated by voice while the system is locked.
+V-220927,medium,The Windows SMB server must be configured to always perform SMB packet signing.
+V-220928,high,Anonymous SID/Name translation must not be allowed.
+V-220929,high,Anonymous enumeration of SAM accounts must not be allowed.
+V-220758,medium,The system must be configured to audit Logon/Logoff - Logon failures.
+V-220943,low,The default permissions of global system objects must be increased.
+V-220891,medium,Exploit Protection mitigations in Windows 10 must be configured for OIS.EXE.
+V-220887,medium,"Exploit Protection mitigations in Windows 10 must be configured for java.exe, javaw.exe, and javaws.exe."
+V-220886,medium,Exploit Protection mitigations in Windows 10 must be configured for INFOPATH.EXE.
+V-220885,medium,Exploit Protection mitigations in Windows 10 must be configured for iexplore.exe.
+V-220884,medium,Exploit Protection mitigations in Windows 10 must be configured for GROOVE.EXE.
+V-220867,medium,The Windows Remote Management (WinRM) service must not store RunAs credentials.
+V-220882,medium,Exploit Protection mitigations in Windows 10 must be configured for firefox.exe.
+V-220881,medium,Exploit Protection mitigations in Windows 10 must be configured for EXCEL.EXE.
+V-220880,medium,Exploit Protection mitigations in Windows 10 must be configured for chrome.exe.
+V-220950,medium,"User Account Control must run all administrators in Admin Approval Mode, enabling UAC."
+V-230220,medium,PowerShell Transcription must be enabled on Windows 10.
+V-220889,medium,Exploit Protection mitigations in Windows 10 must be configured for MSACCESS.EXE.
+V-220888,medium,Exploit Protection mitigations in Windows 10 must be configured for lync.exe.
+V-220829,high,Autoplay must be disabled for all drives.
+V-220768,medium,The system must be configured to audit Policy Change - Authentication Policy Change successes.
+V-220769,medium,The system must be configured to audit Policy Change - Authorization Policy Change successes.
+V-220762,medium,Windows 10 must be configured to audit Object Access - File Share successes.
+V-220763,medium,Windows 10 must be configured to audit Object Access - Other Object Access Events successes.
+V-220760,medium,The system must be configured to audit Logon/Logoff - Special Logon successes.
+V-220761,medium,Windows 10 must be configured to audit Object Access - File Share failures.
+V-220766,medium,The system must be configured to audit Object Access - Removable Storage successes.
+V-220767,medium,The system must be configured to audit Policy Change - Audit Policy Change successes.
+V-220764,medium,Windows 10 must be configured to audit Object Access - Other Object Access Events failures.
+V-220765,medium,The system must be configured to audit Object Access - Removable Storage failures.
