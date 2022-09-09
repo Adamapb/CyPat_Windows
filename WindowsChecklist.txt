@@ -1,5 +1,4 @@
 **Windows Hardening Checklist**
-**Sections 8,15 to be improved
 
 1. Forensics:
 Enter text answer into specified area on the txt file on the desktop.
